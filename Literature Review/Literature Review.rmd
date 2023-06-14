@@ -1,0 +1,81 @@
+---
+title: "Literature - 22202392"
+author: "Jesus Pardo"
+date: "June 2023"
+output: ioslides_presentation
+---
+
+```{r setup, include=FALSE, fig.align='centre',message=FALSE, warning=FALSE}
+knitr::opts_chunk$set(warning = FALSE, message=FALSE,include=FALSE, size=15)
+```
+
+
+```{r,echo=FALSE,message=FALSE,include=FALSE}
+# Note: not all of the packages below are needed - I just copy them into all my presentations
+library(dplyr)
+library(tidyr)
+set.seed(123)
+```
+
+
+## PCA scores colored by gleason category
+
+__The first loading:__
+
+- Gleason categories <span style="color: #66c2a5;">6</span> and <span style="color: #fc8d62;">7</span> are clearly differentiated in that loading.
+\vspace{2mm}
+- Gleason categories <span style="color: #8da0cb;">8</span> and <span style="color: #e5be01;">9</span> aren't that common in the data set, so there is not a clear conclusion about them for this loading.
+
+
+__The second loading:__
+
+- Any gleason category shows a clear relationship with this axis.
+
+## Assignment 1 Plot
+
+```{r}
+data = read.csv('C:/Users/34684/Documents/Master/Advanced Data Programming with R/Data/prostate.csv',header = TRUE)
+
+# Check data imported
+str(data)
+head(data)
+
+# Transform gleason to factor and save it as an independent variable
+gleason = as.factor(data$gleason)
+
+# Extract numerical variables
+df <- subset(data, select = -c(svi, gleason , train))
+
+# Create a PCA
+data_std = scale(df)
+fit.std = prcomp(data_std)
+scores = fit.std$x
+```
+
+```{r, echo=FALSE, include=TRUE}
+# Plot the scores of the PCA by gleason
+colors <- c("#66c2a5","#fc8d62","#8da0cb","#e5be01")[as.integer(gleason)]
+par(mfrow=c(1,1))
+plot(scores[,1:2],                # x and y data
+     pch=21,                      # point shape
+     col=colors,               # point border color
+     bg=colors,                # point color
+     cex=1.5,                     # point size
+     main="Scores by gleason"     # title of plot
+)
+legend("topleft",                                          # position of legend
+       legend=levels(gleason),                             # legend display
+       pch=21,                                             # point shape
+       pt.bg=c("#66c2a5","#fc8d62","#8da0cb","#e5be01"),   # point colors
+       pt.cex=1.5,                                         # point size
+       col = c("#66c2a5","#fc8d62","#8da0cb","#e5be01")    # point border color
+)
+```
+
+
+```{r}
+dev.off()
+```
+
+
+
