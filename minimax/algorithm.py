@@ -1,29 +1,44 @@
+# -*- coding: utf-8 -*-
+
 from copy import deepcopy
 import pygame
 
-RED = (255,0,0)
+RED = (255, 0, 0)
 WHITE = (255, 255, 255)
 
-def minimax(position, depth, max_player, game):
+def minimax(position, depth, max_player, game, alpha , beta):
     if depth == 0 or position.winner() != None:
         return position.evaluate(), position
     
     if max_player:
-        maxEval = float('-inf')
+        maxEval =  float('-inf')
         best_move = None
+        if(get_all_moves(position, WHITE, game) == None):
+            print('tie')
+            
         for move in get_all_moves(position, WHITE, game):
-            evaluation = minimax(move, depth-1, False, game)[0]
+            evaluation = minimax(move, depth-1, False, game, alpha, beta)[0]
             maxEval = max(maxEval, evaluation)
+            alpha = max( alpha, maxEval)
+            if beta <= alpha:
+                break            
             if maxEval == evaluation:
                 best_move = move
         
         return maxEval, best_move
+    
     else:
         minEval = float('inf')
         best_move = None
+        if(get_all_moves(position, RED, game) == None):
+            print('tie')
+           
         for move in get_all_moves(position, RED, game):
-            evaluation = minimax(move, depth-1, True, game)[0]
+            evaluation = minimax(move, depth-1, True, game, alpha, beta)[0]
             minEval = min(minEval, evaluation)
+            beta = min( beta, minEval)
+            if beta <= alpha:
+                break            
             if minEval == evaluation:
                 best_move = move
         
@@ -44,7 +59,7 @@ def get_all_moves(board, color, game):
     for piece in board.get_all_pieces(color):
         valid_moves = board.get_valid_moves(piece)
         for move, skip in valid_moves.items():
-            draw_moves(game, board, piece)
+            #draw_moves(game, board, piece)
             temp_board = deepcopy(board)
             temp_piece = temp_board.get_piece(piece.row, piece.col)
             new_board = simulate_move(temp_piece, move, temp_board, game, skip)
@@ -59,5 +74,5 @@ def draw_moves(game, board, piece):
     pygame.draw.circle(game.win, (0,255,0), (piece.x, piece.y), 50, 5)
     game.draw_valid_moves(valid_moves.keys())
     pygame.display.update()
-    #pygame.time.delay(100)
+    pygame.time.delay(500)
 

@@ -7,14 +7,14 @@ Created on Fri May 26 11:45:25 2023
 import pygame
 from .constants import RED, WHITE, SQUARE_SIZE, GREY, CROWN
 class Piece:
-    PADDING = 10
+    PADDING = 12
     OUTLINE = 2
     
     def __init__(self, row, col, color):
         self.row = row
         self.col = col
         self.color = color
-        self.king = True
+        self.king = False
         
         if self.color == RED:
             self.direction = -1
@@ -41,6 +41,7 @@ class Piece:
         if self.king:
           win.blit(CROWN, (self.x - CROWN.get_width()//2, self.y - CROWN.get_height()//2))  
 
+    # piece new positions because of the movement
     def move(self, row, col):
         self.row = row
         self.col = col

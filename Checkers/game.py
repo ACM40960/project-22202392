@@ -1,8 +1,12 @@
+# -*- coding: utf-8 -*-
+# handle the game
 import pygame
 from .constants import RED, WHITE, BLUE, SQUARE_SIZE
-from checkers.board import Board
+from .board import Board
+
 
 class Game:
+    
     def __init__(self, win):
         self._init()
         self.win = win
@@ -21,24 +25,29 @@ class Game:
     def winner(self):
         return self.board.winner()
 
+# reset game
     def reset(self):
         self._init()
-
-    def select(self, row, col):
-        if self.selected:
-            result = self._move(row, col)
-            if not result:
-                self.selected = None
-                self.select(row, col)
         
-        piece = self.board.get_piece(row, col)
-        if piece != 0 and piece.color == self.turn:
-            self.selected = piece
-            self.valid_moves = self.board.get_valid_moves(piece)
-            return True
-            
-        return False
-
+# select method
+    def select(self, row, col):
+            # redo the selection until one movement is correct
+           if self.selected:
+               result = self._move(row, col)
+               if not result:
+                   self.selected = None
+                   self.select(row, col)
+           
+            # move the piece selected correctly with a valid movement
+           piece = self.board.get_piece(row, col)
+           if piece != 0 and piece.color == self.turn:
+               self.selected = piece
+               self.valid_moves = self.board.get_valid_moves(piece)
+               return True
+               
+           return False  
+ 
+# move method, make valid movement empty, slected and valid       
     def _move(self, row, col):
         piece = self.board.get_piece(row, col)
         if self.selected and piece == 0 and (row, col) in self.valid_moves:
@@ -50,13 +59,15 @@ class Game:
         else:
             return False
 
-        return True
-
+        return True     
+    
+# obtain valid movemnets    
     def draw_valid_moves(self, moves):
         for move in moves:
             row, col = move
             pygame.draw.circle(self.win, BLUE, (col * SQUARE_SIZE + SQUARE_SIZE//2, row * SQUARE_SIZE + SQUARE_SIZE//2), 15)
 
+# change turn
     def change_turn(self):
         self.valid_moves = {}
         if self.turn == RED:
@@ -69,4 +80,4 @@ class Game:
 
     def ai_move(self, board):
         self.board = board
-        self.change_turn()
+        self.change_turn()    
