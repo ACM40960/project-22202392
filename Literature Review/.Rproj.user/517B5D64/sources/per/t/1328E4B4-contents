@@ -4,13 +4,13 @@
 ![Python](https://img.shields.io/badge/python-v3.6+-blue.svg)
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 
-# AI plays chekers
+# AI plays checkers
 
 
 ## Overview
 
 This project contains how to create an AI bot for playing checkers against it. The bot game strategy is based on the minimax algorithm.
-A brief introduction to the minimax algorithm theory can be found in the [Minimax](https://info.sydcon.com/blog/a-brief-introduction-to-game-theory-the-minimax-algorithm) web. The code is in this [Repository](https://github.com/ACM40960/project-22202392/tree/main) and the presentation is in this pdf file [Presentation](AI plays chekers - presentation.pdf) .
+A brief introduction to the minimax algorithm theory can be found in the [Minimax](https://info.sydcon.com/blog/a-brief-introduction-to-game-theory-the-minimax-algorithm) web. The code is in this [Repository](https://github.com/ACM40960/project-22202392/tree/main) and the presentation is in this pdf file [Presentation](AI plays checkers - presentation.pdf) .
 
 
 ## Getting Started
@@ -27,7 +27,7 @@ It is necessary to install these modules before executing the code.
 
 ## Project documents
 
-The main parts of the project are divided in two folders ([Chekers](https://github.com/ACM40960/project-22202392/tree/main/Checkers) and [minimax](https://github.com/ACM40960/project-22202392/tree/main/minimax)).
+The main parts of the project are divided in two folders ([Checkers](https://github.com/ACM40960/project-22202392/tree/main/Checkers) and [minimax](https://github.com/ACM40960/project-22202392/tree/main/minimax)).
 
 #### Checkers  
 
