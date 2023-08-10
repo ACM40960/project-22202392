@@ -30,10 +30,11 @@ It is necessary to install these modules before executing the code.
 The main parts of the project are divided in two folders ([Chekers](https://github.com/ACM40960/project-22202392/tree/main/Checkers) and [minimax](https://github.com/ACM40960/project-22202392/tree/main/minimax)).
 
 #### Checkers  
-[Constants](https://github.com/ACM40960/project-22202392/blob/main/Checkers/constants.py) file: It is where the constants used in the project are saved. 
-[Board](https://github.com/ACM40960/project-22202392/blob/main/Checkers/board.py) file: It is where the board attributes, structure and drawn are created.
-[Piece](https://github.com/ACM40960/project-22202392/blob/main/Checkers/piece.py) file: It is where the pieces attributes, structure and drawn are created.
-[Game](https://github.com/ACM40960/project-22202392/blob/main/Checkers/game.py) file: It is where the game dynamics and functions are created.
+
+- [Constants](https://github.com/ACM40960/project-22202392/blob/main/Checkers/constants.py) file: It is where the constants used in the project are saved. 
+- [Board](https://github.com/ACM40960/project-22202392/blob/main/Checkers/board.py) file: It is where the board attributes, structure and drawn are created.
+- [Piece](https://github.com/ACM40960/project-22202392/blob/main/Checkers/piece.py) file: It is where the pieces attributes, structure and drawn are created.
+- [Game](https://github.com/ACM40960/project-22202392/blob/main/Checkers/game.py) file: It is where the game dynamics and functions are created.
 
 #### Minimax
 
