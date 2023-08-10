@@ -1,4 +1,4 @@
-<p align="center"><img width=60.5% src="https://github.com/ACM40960/project-22202392/blob/main/Literature%20Review/RCD005NEW_03.png?raw=true"></p>
+<p align="center"><img width=60.5% src="https://github.com/ACM40960/project-22202392/blob/main/assets/RCD005NEW_03.png?raw=true"></p>
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 ![Python](https://img.shields.io/badge/python-v3.6+-blue.svg)
@@ -65,7 +65,7 @@ The function has the following parameters:
 
 Recorded game between two AI bots:
 
-![](https://github.com/ACM40960/project-22202392/blob/main/Literature%20Review/game.gif?raw=true)
+![](https://github.com/ACM40960/project-22202392/blob/main/assets/game.gif?raw=true)
 
 
 ### Acknowledgements
