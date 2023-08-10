@@ -10,7 +10,7 @@
 ## Overview
 
 This project contains how to create an AI bot for playing checkers against it. The bot game strategy is based on the minimax algorithm.
-A brief introduction to the minimax algorithm theory can be found in the [Minimax](https://info.sydcon.com/blog/a-brief-introduction-to-game-theory-the-minimax-algorithm) web. The code is in this [Repository](https://github.com/ACM40960/project-22202392/tree/main) and the presentation is in this pdf file [Presentation]() .
+A brief introduction to the minimax algorithm theory can be found in the [Minimax](https://info.sydcon.com/blog/a-brief-introduction-to-game-theory-the-minimax-algorithm) web. The code is in this [Repository](https://github.com/ACM40960/project-22202392/tree/main) and the presentation is in this pdf file [Presentation](AI plays chekers - presentation.pdf) .
 
 
 ## Getting Started
