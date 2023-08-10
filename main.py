@@ -2,7 +2,7 @@ import pygame
 from Checkers.constants import WIDTH, HEIGHT, SQUARE_SIZE, RED, WHITE
 from constants_api import FPS
 from Checkers.game import Game
-from minimax.algorithm import minimax, get_all_moves
+from minimax.algorithm import minimax
 #from Checkers.board import white_kings
 
 #Display the game

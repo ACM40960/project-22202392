@@ -1,6 +1,12 @@
-<p align="center"><img width=12.5% src="https://github.com/ACM40960/project-22202392/blob/main/Literature%20Review/RCD005NEW_03.jpg"></p>
+<p align="center"><img width=60.5% src="https://github.com/ACM40960/project-22202392/blob/main/Literature%20Review/RCD005NEW_03.png?raw=true"></p>
 
-## Structure of the repository
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+![Python](https://img.shields.io/badge/python-v3.6+-blue.svg)
+[![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://opensource.org/licenses/MIT)
+
+# AI plays chekers
+
+##Overview
 
 In this project I wanted to solve the Travelling Salesperson Problem. A brief literary review/introduction for the theoretical background can be found in the [TSP_review.pdf](TSP_review.pdf) file. The code is uploaded in pdf format [TSP.pdf](TSP.pdf) and as a jupyter notebook [TSP.ipynb](TSP.ipynb) which users can download and run. The presentation is available under the file [TSP_presentation.pdf](TSP_presentation.pdf).
 
@@ -61,6 +67,7 @@ For example running the following code will produce the following plots:
 ![SA_sol](https://github.com/ACM40960/project-fischu42/assets/115270211/16e85d6c-65db-4047-9a46-da6d746fe2c3)
 
 
+![](C:/Users/34684/Documents/Master/Final Project/project-22202392/Literature Review/game.gif)
 
 
 ### Ant Colony Optimization
