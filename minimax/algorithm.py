@@ -13,8 +13,7 @@ def minimax(position, depth, max_player, game, alpha , beta):
     if max_player:
         maxEval =  float('-inf')
         best_move = None
-        if(get_all_moves(position, WHITE, game) == None):
-            print('tie')
+
             
         for move in get_all_moves(position, WHITE, game):
             evaluation = minimax(move, depth-1, False, game, alpha, beta)[0]
@@ -30,8 +29,6 @@ def minimax(position, depth, max_player, game, alpha , beta):
     else:
         minEval = float('inf')
         best_move = None
-        if(get_all_moves(position, RED, game) == None):
-            print('tie')
            
         for move in get_all_moves(position, RED, game):
             evaluation = minimax(move, depth-1, True, game, alpha, beta)[0]
