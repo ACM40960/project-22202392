@@ -36,10 +36,10 @@ def main():
             #print(self.white_kings)
 
 
-        if game.turn == RED:
-            value, new_board = minimax(game.get_board(), 3, None, game, -100, +100)
-            game.ai_move(new_board) 
-            max_turns = max_turns-1
+      #  if game.turn == RED:
+      #      value, new_board = minimax(game.get_board(), 3, None, game, -100, +100)
+      #      game.ai_move(new_board) 
+      #      max_turns = max_turns-1
             
         if game.winner() != None:
             print(game.winner())
